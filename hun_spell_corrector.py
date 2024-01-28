@@ -9,9 +9,9 @@ def train(features):
         model[f] += 1
     return model
     
-NWORDS = train(words(file('wordcount.txt').read()))
+NWORDS = train(words(open('wordcount.txt', 'r').read()))
 
-alphabet = 'abcdefghijklmnopqrstuvwxyz'
+alphabet = 'aábcdeéfghiíjklmnoóöőpqrstuúüűvwxyz'
 
 def edits1(word):
     splits     = [(word[:i], word[i:]) for i in range(len(word) + 1)]
